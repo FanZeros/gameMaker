@@ -2,7 +2,7 @@
   "meta": {
     "name": "真相阴影",
     "author": "Mystery Games Inc.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "探索黑暗的房间，收集线索，解开废弃的黑木庄园之谜。"
   },
   "initialState": {
