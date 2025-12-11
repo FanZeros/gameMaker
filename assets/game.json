@@ -1,4 +1,3 @@
-
 {
   "meta": {
     "name": "真相阴影",
@@ -96,27 +95,29 @@
           "id": "painting",
           "name": "主人画像",
           "description": "亚瑟·布莱克伍德的油画。",
-          "x": 25,
-          "y": 25,
-          "width": 15,
+          "x": 6.9,
+          "y": 20.7,
+          "width": 9.3,
           "height": 25,
           "icon": "🖼️",
-          "image": "./assets/item_painting.png",
+          "image": "./assets/item_lobby_painting.png",
           "dialogue": [
             "画中的亚瑟神情狂热，他的手指向背景中一个黑色的立方体。",
             "名牌上刻着生卒年：1940 - 1984(?)"
-          ]
+          ],
+          "rotationY": 67,
+          "brightness": 0.4
         },
         {
           "id": "basement_door",
           "name": "地窖门",
           "description": "通往地下的厚重木门。",
-          "x": 60,
-          "y": 55,
+          "x": 44.3,
+          "y": 43.3,
           "width": 15,
           "height": 35,
           "icon": "🚪",
-          "image": "./assets/item_basement_door.png",
+          "image": "./assets/item_lobby_basement_door.png",
           "requiredItemId": "crowbar",
           "flagReward": "basement_unlocked",
           "hiddenIfFlag": "basement_unlocked",
@@ -124,7 +125,8 @@
           "dialogue": [
             "伴随着木材断裂的巨响，封印被打破了。",
             "一股寒冷的腐风从黑暗中吹出。"
-          ]
+          ],
+          "brightness": 0.7
         }
       ],
       "exits": [
@@ -156,65 +158,76 @@
           "id": "desk_drawer",
           "name": "办公桌",
           "description": "堆满未付账单的桌子。",
-          "x": 35,
-          "y": 60,
-          "width": 20,
-          "height": 15,
+          "x": 43.4,
+          "y": 44.7,
+          "width": 12.2,
+          "height": 13.2,
           "icon": "🗄️",
-          "image": "./assets/item_desk_drawer.png",
+          "image": "./assets/item_office_desk_drawer.png",
           "itemRewardId": "flashlight",
           "hiddenIfFlag": "found_flashlight",
           "dialogue": [
             "你在抽屉深处找到了一把沉重的手电筒，电池似乎还能用。"
-          ]
+          ],
+          "rotation": 7,
+          "rotationY": -26,
+          "brightness": 1
         },
         {
           "id": "research_papers",
           "name": "散落文件",
           "description": "桌上的一堆图纸。",
-          "x": 55,
-          "y": 65,
-          "width": 15,
-          "height": 10,
+          "x": 54.4,
+          "y": 40.7,
+          "width": 12.7,
+          "height": 24.6,
           "icon": "📄",
           "itemRewardId": "research_note",
           "hiddenIfFlag": "found_research_note",
           "dialogue": [
             "你拾起一张被反复涂改的记录纸。",
             "上面记录着亚瑟对某种“来自群星的信号”的痴迷。"
-          ]
+          ],
+          "image": "./assets/item_office_research_papers.png",
+          "brightness": 0.7
         },
         {
           "id": "safe",
           "name": "墙壁保险箱",
           "description": "藏在画像后的保险箱。",
-          "x": 80,
-          "y": 40,
-          "width": 12,
-          "height": 12,
+          "x": 8.5,
+          "y": 32.8,
+          "width": 10.7,
+          "height": 19.1,
           "icon": "🔐",
-          "image": "./assets/item_safe.png",
+          "image": "./assets/item_office_safe.png",
           "hiddenIfFlag": "safe_open",
           "isPuzzle": true,
-          "puzzleId": "safe_code"
+          "puzzleId": "safe_code",
+          "rotationY": 3,
+          "rotation": -102,
+          "brightness": 0.4
         },
         {
           "id": "open_safe",
           "name": "保险箱（开）",
           "description": "保险箱门开着。",
-          "x": 80,
-          "y": 40,
-          "width": 12,
-          "height": 12,
+          "x": 6.4,
+          "y": 29.2,
+          "width": 15.6,
+          "height": 28.4,
           "icon": "🔓",
-          "image": "./assets/item_open_safe.png",
+          "image": "./assets/item_office_open_safe.png",
           "requiredFlag": "safe_open",
           "itemRewardId": "fuse",
           "hiddenIfFlag": "found_fuse",
           "dialogue": [
             "保险箱里没有金钱，只有这个用绝缘材料包裹的工业保险丝。",
             "看来这就是亚瑟拼命想要保护的东西。"
-          ]
+          ],
+          "rotationY": 4,
+          "rotation": -104,
+          "brightness": 0.3
         }
       ],
       "exits": [
@@ -229,7 +242,7 @@
       "id": "hallway",
       "title": "死寂走廊",
       "imageUrl": "./assets/scene_hallway.png",
-      "description": "伸手不见五指的黑暗。你能感觉到有什么东西在黑暗中注视着你。",
+      "description": "伸手不见五指的黑暗，没有一点光。",
       "conditionalVariant": {
         "targetSceneId": "hallway_lit",
         "requiredItemId": "flashlight"
@@ -239,12 +252,12 @@
           "id": "darkness_msg",
           "name": "黑暗",
           "description": "这不仅仅是由于缺乏光线。这是一种有实质的黑暗。",
-          "x": 40,
-          "y": 40,
-          "width": 20,
-          "height": 20,
+          "x": 23.1,
+          "y": 0,
+          "width": 52.7,
+          "height": 109.3,
           "icon": "🌑",
-          "image": "./assets/item_darkness_msg.png",
+          "image": "./assets/item_hallway_darkness_msg.png",
           "dialogue": [
             "你需要强光源才能穿透这层迷雾。"
           ]
@@ -268,12 +281,12 @@
           "id": "lab_door",
           "name": "核心区铁门",
           "description": "一扇带有生物识别扫描仪（已损坏）和老式机械锁的重型铁门。",
-          "x": 45,
-          "y": 30,
+          "x": 42.2,
+          "y": 29.8,
           "width": 15,
           "height": 40,
           "icon": "⛓️",
-          "image": "./assets/item_lab_door.png",
+          "image": "./assets/item_hallway_lit_lab_door.png",
           "requiredItemId": "silver_key",
           "flagReward": "lab_unlocked",
           "lockedMessage": "普通的撬棍对它无济于事。锁孔散发着寒气，似乎需要某种特殊的钥匙。",
@@ -313,33 +326,37 @@
           "id": "bookshelf",
           "name": "神秘学书籍",
           "description": "《死灵之书》的残卷、《量子力学悖论》... 科学与疯狂在这里交织。",
-          "x": 20,
-          "y": 30,
-          "width": 30,
-          "height": 40,
+          "x": 23.5,
+          "y": 70.7,
+          "width": 8.7,
+          "height": 13,
           "icon": "📚",
-          "image": "./assets/item_bookshelf.png",
+          "image": "./assets/item_library_bookshelf.png",
           "itemRewardId": "diary",
           "hiddenIfFlag": "found_diary",
           "dialogue": [
             "在一本名为《门之钥》的书籍夹层中，你发现了亚瑟的私人日记。"
-          ]
+          ],
+          "brightness": 0.3,
+          "rotationY": -10
         },
         {
           "id": "toolbox",
           "name": "维修角落",
           "description": "显然有人曾在这里试图加固门窗。",
-          "x": 70,
-          "y": 70,
-          "width": 15,
-          "height": 15,
+          "x": 61.5,
+          "y": 9,
+          "width": 12,
+          "height": 18.7,
           "icon": "🧰",
-          "image": "./assets/item_toolbox.png",
+          "image": "./assets/item_library_toolbox.png",
           "itemRewardId": "crowbar",
           "hiddenIfFlag": "found_crowbar",
           "dialogue": [
             "在杂物堆中，你发现了一把沾有血迹的撬棍。"
-          ]
+          ],
+          "brightness": 0.2,
+          "rotationY": -47
         }
       ],
       "exits": [
@@ -360,12 +377,12 @@
           "id": "fuse_box",
           "name": "主控配电箱",
           "description": "上面的警示牌写着：“危险：高压。切勿开启。”电线被暴力扯断了。",
-          "x": 30,
-          "y": 40,
+          "x": 6.9,
+          "y": 40.7,
           "width": 10,
           "height": 15,
           "icon": "⚡",
-          "image": "./assets/item_fuse_box.png",
+          "image": "./assets/item_basement_fuse_box.png",
           "requiredItemId": "fuse",
           "flagReward": "power_on",
           "lockedMessage": "主回路断开了。亚瑟当年为了阻止什么，故意拔掉了保险丝。",
@@ -373,25 +390,29 @@
             "你将工业保险丝推入卡槽。",
             "随着低沉的嗡鸣声，沉睡了40年的发电机重新咆哮起来。",
             "工作台上的应急灯亮了。"
-          ]
+          ],
+          "brightness": 0.5
         },
         {
           "id": "workbench_key",
           "name": "精密工作台",
           "description": "一张布满精密仪器的工作台。",
-          "x": 60,
-          "y": 60,
-          "width": 25,
-          "height": 20,
+          "x": 1.6,
+          "y": 67.2,
+          "width": 19.3,
+          "height": 23.3,
           "icon": "🛠️",
-          "image": "./assets/item_workbench_key.png",
+          "image": "./assets/item_basement_workbench_key.png",
           "requiredFlag": "power_on",
           "itemRewardId": "silver_key",
           "hiddenIfFlag": "found_key",
           "dialogue": [
             "灯光下，你看到了亚瑟留下的最后造物。",
             "一把闪烁着非自然银光、仿佛处于液态与固态之间的钥匙。"
-          ]
+          ],
+          "brightness": 0.8,
+          "rotation": 5,
+          "rotationY": -5
         }
       ],
       "exits": [
@@ -412,18 +433,20 @@
           "id": "artifact",
           "name": "奇点",
           "description": "悬浮在装置核心的黑色立方体。它在观察你。",
-          "x": 45,
-          "y": 45,
-          "width": 10,
-          "height": 10,
+          "x": 20.5,
+          "y": 67.5,
+          "width": 16.3,
+          "height": 30.6,
           "icon": "🔮",
-          "image": "./assets/item_artifact.png",
+          "image": "./assets/item_lab_artifact.png",
           "itemRewardId": "mysterious_artifact",
           "dialogue": [
             "当你触碰到它时，无数的记忆涌入你的脑海。",
             "亚瑟并没有死，他只是……去到了另一边。",
             "现在，门打开了。"
-          ]
+          ],
+          "brightness": 0.6,
+          "rotation": -13
         }
       ],
       "exits": [
@@ -434,5 +457,9 @@
         }
       ]
     }
+  },
+  "marketing": {
+    "iconUrl": "./assets/game_icon_512.png",
+    "bannerUrl": "./assets/game_banner_1080.png"
   }
 }
